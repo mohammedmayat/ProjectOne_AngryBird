@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Angry Bird</title>
+    <style>
+
+
+        /*background-image: url("angryBirdBackground.jpg");*/
+
+        body, html {
+            padding: 0;
+            margin: 0;
+
+        }
+
+        #angryBird {
+            background-image: url("angryBirdBackground.jpg");
+        }
+
+
+    </style>
+
+</head>
+<body>
+
+<canvas id="angryBird" height="630px" width="1345px">
+
+</canvas>
+
+
+<script type="text/javascript">
+
+
+    var canvas =
+        document.getElementById("angryBird");
+    var ctx = canvas.getContext("2d");
+
+    // var background = new Image();
+    // background.src =("angryBirdBackground.jpeq");
+
+
+    function circle(x, y, radius, startangle, endangle) {
+        ctx.beginPath();
+        ctx.arc(x, y, radius, startangle, endangle);
+        ctx.fill();
+        ctx.stroke();
+
+    }
+
+
+    //circle body
+    ctx.fillStyle = "#da251c";
+    ctx.lineWidth = 5;
+    ctx.strokeStyle = 'black';
+    circle(700, 290, 150, 0, 2 * Math.PI, true);
+
+
+    //head curve
+    ctx.beginPath();
+    ctx.moveTo(610, 167);
+    ctx.bezierCurveTo(630, 80, 790, 1, 688, 140);
+    ctx.lineWidth = 5;
+    ctx.strokeStyle = 'black';
+    ctx.fillStyle = '#da251c';
+    ctx.fill();
+    ctx.closePath();
+    ctx.stroke();
+
+
+    //head curve2
+    ctx.beginPath();
+    ctx.moveTo(715, 100);
+    ctx.bezierCurveTo(740, 80, 890, 150, 692, 140);
+    ctx.lineWidth = 5;
+    // line color
+    ctx.strokeStyle = '#000';
+    ctx.fillStyle = '#da251c';
+    ctx.fill();
+    ctx.closePath();
+    ctx.stroke();
+
+
+    // circle cover middle black stroke
+    ctx.fillStyle = "#da251c";
+    ctx.lineWidth = 1;
+    ctx.strokeStyle = "#da251c";
+    circle(693, 124, 22, 0, 2 * Math.PI, true);
+
+    // circle cover bottom black stroke
+    ctx.fillStyle = "#da251c";
+    ctx.lineWidth = 5;
+    ctx.strokeStyle = "#da251c";
+    circle(674, 182, 60, 0, 2 * Math.PI, true);
+
+
+    //bottom elispe
+    ctx.beginPath();
+    ctx.fillStyle = "#fff";
+    ctx.ellipse(700, 400, 40, 90, 45 * Math.PI / 90, 0, 2 * Math.PI);
+    ctx.fill();
+    ctx.lineWidth = 5;
+    ctx.strokeStyle = "#000";
+    ctx.closePath();
+    ctx.stroke();
+
+    //eyes left
+    ctx.fillStyle = "#fff";
+    ctx.strokeStyle = "#000";
+    ctx.lineWidth = "5";
+    circle(630, 295, 40, 0, 2 * Math.PI, true);
+
+    //eyeball left
+    ctx.fillStyle = "#000";
+    ctx.strokeStyle = "#fff";
+    ctx.lineWidth = "5";
+    circle(640, 290, 15, 0, 2 * Math.PI, true);
+
+
+    //eyes right
+    ctx.fillStyle = "#fff";
+    ctx.strokeStyle = "#000";
+    ctx.lineWidth = "5";
+    circle(700, 295, 40, 0, 2 * Math.PI, true);
+
+
+    //eyes right
+    ctx.fillStyle = "#000";
+    ctx.strokeStyle = "#fff";
+    ctx.lineWidth = "5";
+    circle(700, 290, 17, 0, 2 * Math.PI, true);
+
+    //eyebrow left
+    ctx.beginPath();
+    ctx.moveTo(557, 250); //bottom left
+    ctx.lineTo(570, 220); //top left
+    ctx.lineTo(670, 260); //top right
+    ctx.lineTo(665, 270); //bottom right
+    ctx.fillStyle = '#000';
+    ctx.strokeStyle = "#000";
+    ctx.fill();
+    ctx.closePath();
+    ctx.stroke();
+
+    //eyebrow right
+    ctx.beginPath();
+    ctx.moveTo(670, 270); //bottom left
+    ctx.lineTo(670, 260); //top left
+    ctx.lineTo(765, 230); //top right
+    ctx.lineTo(765, 260); //bottom right
+    ctx.fillStyle = '#000';
+    ctx.fill();
+    ctx.closePath();
+    ctx.stroke();
+
+    //top bick
+    ctx.beginPath();
+    ctx.moveTo(727, 360);  //right point
+    ctx.lineTo(660, 310);   //top point
+    ctx.lineTo(576, 360);  //left point
+    ctx.fillStyle = "#FFf500";
+    ctx.fill();
+    ctx.lineWidth = 4;
+    ctx.strokeStyle = '#000';
+    ctx.closePath();
+    ctx.stroke();
+
+    //bottom bick
+    ctx.beginPath();
+    ctx.moveTo(650, 402);  //bottom corner
+    ctx.lineTo(600, 360);   //left corner
+    ctx.lineTo(722, 360);   //right corner
+    ctx.fillStyle = "#FFf500";
+    ctx.fill();
+    ctx.lineWidth = 4;
+    ctx.strokeStyle = '#000';
+    ctx.closePath();
+    ctx.stroke();
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Angry Bird</title>
+    <style>
+    #angryBird {
+
+    background-color: #eaeaea;
+
+
+
+    }
+
+    h2{
+    font-size: 26px;
+    text-align: center;
+    color: orange;
+    }
+
+    </style>
+
+    </head>
+<body>
+<h2>Angry Bird</h2>
+<canvas id="angryBird" height="500px" width="1330px">
+
+</canvas>
+
+
+<script type="text/javascript">
+
+
+    var canvas =
+        document.getElementById("angryBird");
+    var ctx = canvas.getContext("2d");
+
+
+    //circle
+    ctx.beginPath();
+    ctx.arc(700, 290, 150, 0, 2 * Math.PI, false);
+    ctx.fillStyle = '#da251c';
+    ctx.fill();
+    ctx.lineWidth = 5;
+    ctx.strokeStyle = '#000';
+    ctx.closePath();
+    ctx.stroke();
+    // ctx.clip();
+    // ctx.clearRect(0, 0, offset, offset);
+    //
+    // /// remove clipping mask
+    // ctx.restore();
+
+
+
+    //head curve
+    ctx.beginPath();
+    ctx.moveTo(610, 167);
+    ctx.bezierCurveTo(630, 80, 790, 1, 688, 140);
+    ctx.lineWidth = 5;
+    ctx.strokeStyle = 'black';
+    ctx.fillStyle = '#da251c';
+    ctx.fill();
+    ctx.closePath();
+    ctx.stroke();
+
+
+    //head curve2
+    ctx.beginPath();
+    ctx.moveTo(715, 100);
+    ctx.bezierCurveTo(740, 80, 890, 150, 692, 140);
+    ctx.lineWidth = 5;
+    // line color
+    ctx.strokeStyle = 'black';
+    ctx.fillStyle = '#da251c';
+    ctx.fill();
+    ctx.closePath();
+    ctx.stroke();
+
+   //
+   // // // cover black stroke
+   // ctx.beginPath();
+   // ctx.lineWidth = 5;
+   // ctx.strokeStyle = 'green';
+   // ctx.moveTo(617, 165);
+   // ctx.bezierCurveTo(800, 80, 620, 250, 630, 160);
+   // ctx.stroke()
+
+
+    //circle cover botton black stroke
+    ctx.beginPath();
+    ctx.arc(671, 182, 60, 0, 2 * Math.PI, false);
+    ctx.fillStyle = '#da251c';
+    ctx.fill();
+    ctx.lineWidth = 1;
+    ctx.strokeStyle = '#da251c';
+    ctx.closePath();
+    ctx.stroke();
+
+
+    //circle cover middle path
+    ctx.beginPath();
+    ctx.arc(693, 124, 22, 0, 2 * Math.PI, false);
+    ctx.fillStyle = '#da251c';
+    ctx.fill();
+    ctx.lineWidth = 1;
+    ctx.strokeStyle = '#da251c';
+    ctx.closePath();
+    ctx.stroke();
+
+
+   // eyes left
+    ctx.beginPath();
+    ctx.arc(630, 295, 40, 0, 2 * Math.PI, false);
+    ctx.fillStyle = '#fff';
+    ctx.fill();
+    ctx.lineWidth = 5;
+    ctx.strokeStyle = '#000';
+    ctx.closePath();
+    ctx.stroke();
+
+    //eyeball left
+    ctx.beginPath();
+    ctx.arc(640, 290, 10, 0, 2 * Math.PI, false);
+    ctx.fillStyle = '#000';
+    ctx.fill();
+    ctx.lineWidth = 5;
+    ctx.strokeStyle = '#000';
+    ctx.closePath();
+    ctx.stroke();
+
+
+
+    // eyes right
+    ctx.beginPath();
+    ctx.arc(700, 295, 40, 0, 2 * Math.PI, false);
+    ctx.fillStyle = '#fff';
+    ctx.fill();
+    ctx.lineWidth = 5;
+    ctx.strokeStyle = '#000';
+    ctx.closePath();
+    ctx.stroke();
+
+    //eyeball right
+    ctx.beginPath();
+    ctx.arc(700, 290, 10, 0, 2 * Math.PI, false);
+    ctx.fillStyle = '#000';
+    ctx.fill();
+    ctx.lineWidth = 5;
+    ctx.strokeStyle = '#000';
+    ctx.closePath();
+    ctx.stroke();
+
+    //eyebrow left
+    ctx.beginPath();
+    ctx.moveTo(560, 250); //bottom left
+    ctx.lineTo(570, 220); //top left
+    ctx.lineTo(670, 260); //top right
+    ctx.lineTo(665, 270); //bottom right
+    ctx.fillStyle = '#000';
+    ctx.fill();
+    ctx.closePath();
+    ctx.stroke();
+
+
+    //eyebrow right
+    ctx.beginPath();
+    ctx.moveTo(670, 270); //bottom left
+    ctx.lineTo(670, 260); //top left
+    ctx.lineTo(765, 230); //top right
+    ctx.lineTo(765, 260); //bottom right
+    ctx.fillStyle = '#000';
+    ctx.fill();
+    ctx.closePath();
+    ctx.stroke();
+
+
+    //top bick
+    ctx.beginPath();
+    ctx.moveTo(727, 360);  //right point
+    ctx.lineTo(660, 310);   //top point
+    ctx.lineTo(576, 360);  //left point
+    ctx.fillStyle = "#FFf500";
+    ctx.fill();
+    ctx.lineWidth = 4;
+    ctx.strokeStyle = '#000';
+    ctx.closePath();
+    ctx.stroke();
+
+
+    //bottom bick
+    ctx.beginPath();
+    ctx.moveTo(650, 402);  //bottom corner
+    ctx.lineTo(600, 360);   //left corner
+    ctx.lineTo(722, 360);   //right corner
+    ctx.fillStyle = "#FFf500";
+    ctx.fill();
+    ctx.lineWidth = 4;
+    ctx.strokeStyle = '#000';
+    ctx.closePath();
+    ctx.stroke();
+
+
+</script>
+
+
+</body>
+</html>
