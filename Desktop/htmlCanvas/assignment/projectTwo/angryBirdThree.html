@@ -45,6 +45,8 @@
         ctx.arc(x, y, radius, startangle, endangle);
         ctx.fill();
         ctx.stroke();
+        ctx.closePath();
+
 
     }
 
@@ -52,14 +54,17 @@
     //circle body
     ctx.fillStyle = "#da251c";
     ctx.lineWidth = 5;
-    ctx.strokeStyle = 'black';
-    circle(700, 290, 150, 0, 2 * Math.PI, true);
+    ctx.strokeStyle = "#000";
+    circle(700, 290, 150, 0, 2 * Math.PI, false);
 
 
     //head curve
     ctx.beginPath();
     ctx.moveTo(610, 167);
     ctx.bezierCurveTo(630, 80, 790, 1, 688, 140);
+    ctx.bezierCurveTo(740, 20, 980, 180, 692, 170);
+    // ctx.bezierCurveTo(710, 80, 840, 70, 805, 180);
+    // ctx.bezierCurveTo(805, 180, 825, 60, 855, 180);
     ctx.lineWidth = 5;
     ctx.strokeStyle = 'black';
     ctx.fillStyle = '#da251c';
@@ -67,80 +72,89 @@
     ctx.closePath();
     ctx.stroke();
 
-
-    //head curve2
     ctx.beginPath();
-    ctx.moveTo(715, 100);
-    ctx.bezierCurveTo(740, 80, 890, 150, 692, 140);
-    ctx.lineWidth = 5;
-    // line color
-    ctx.strokeStyle = '#000';
+    ctx.rect(615, 163, 160,10);
+    ctx.lineWidth = 1;
+    ctx.strokeStyle = '#da251c';
     ctx.fillStyle = '#da251c';
     ctx.fill();
     ctx.closePath();
     ctx.stroke();
+
+    // //head curve2
+    // ctx.beginPath();
+    // ctx.moveTo(715, 100);
+    // ctx.bezierCurveTo(740, 80, 890, 150, 692, 140);
+    // ctx.lineWidth = 5;
+    // // line color
+    // ctx.strokeStyle = '#000';
+    // ctx.fillStyle = 'yellow';
+    // ctx.fill();
+    // ctx.closePath();
+    // ctx.stroke();
 
 
     // circle cover middle black stroke
     ctx.fillStyle = "#da251c";
     ctx.lineWidth = 1;
     ctx.strokeStyle = "#da251c";
-    circle(693, 124, 22, 0, 2 * Math.PI, true);
+    circle(693, 134, 32, 0, 2 * Math.PI, true);
+    //
+    // // circle cover bottom black stroke
+    // ctx.fillStyle = "yellow";
+    // ctx.lineWidth = 5;
+    // ctx.strokeStyle = "#da251c";
+    // circle(698, 182, 85, 0, 2 * Math.PI, true);
 
-    // circle cover bottom black stroke
-    ctx.fillStyle = "#da251c";
-    ctx.lineWidth = 5;
-    ctx.strokeStyle = "#da251c";
-    circle(674, 182, 60, 0, 2 * Math.PI, true);
-
-
-    //bottom elispe
+    //bottom ellispe for bottom of body
     ctx.beginPath();
-    ctx.fillStyle = "#fff";
     ctx.ellipse(700, 400, 40, 90, 45 * Math.PI / 90, 0, 2 * Math.PI);
+    ctx.fillStyle = "#fff";
     ctx.fill();
     ctx.lineWidth = 5;
     ctx.strokeStyle = "#000";
+     ctx.stroke();
     ctx.closePath();
-    ctx.stroke();
+   
 
     //eyes left
     ctx.fillStyle = "#fff";
     ctx.strokeStyle = "#000";
     ctx.lineWidth = "5";
-    circle(630, 295, 40, 0, 2 * Math.PI, true);
+    circle(630, 295, 40, 0, 2 * Math.PI, false);
 
     //eyeball left
     ctx.fillStyle = "#000";
     ctx.strokeStyle = "#fff";
     ctx.lineWidth = "5";
-    circle(640, 290, 15, 0, 2 * Math.PI, true);
+    circle(640, 290, 15, 0, 2 * Math.PI, false);
 
 
     //eyes right
     ctx.fillStyle = "#fff";
     ctx.strokeStyle = "#000";
     ctx.lineWidth = "5";
-    circle(700, 295, 40, 0, 2 * Math.PI, true);
+    circle(700, 295, 40, 0, 2 * Math.PI, false);
 
 
     //eyes right
     ctx.fillStyle = "#000";
     ctx.strokeStyle = "#fff";
     ctx.lineWidth = "5";
-    circle(700, 290, 17, 0, 2 * Math.PI, true);
+    circle(700, 290, 17, 0, 2 * Math.PI, false);
 
     //eyebrow left
     ctx.beginPath();
-    ctx.moveTo(557, 250); //bottom left
+    ctx.moveTo(557, 260); //bottom left
     ctx.lineTo(570, 220); //top left
     ctx.lineTo(670, 260); //top right
     ctx.lineTo(665, 270); //bottom right
     ctx.fillStyle = '#000';
     ctx.strokeStyle = "#000";
     ctx.fill();
-    ctx.closePath();
     ctx.stroke();
+    ctx.closePath();
+    
 
     //eyebrow right
     ctx.beginPath();
@@ -164,6 +178,7 @@
     ctx.strokeStyle = '#000';
     ctx.closePath();
     ctx.stroke();
+    
 
     //bottom bick
     ctx.beginPath();
@@ -176,6 +191,8 @@
     ctx.strokeStyle = '#000';
     ctx.closePath();
     ctx.stroke();
+
+
 
 </script>
 
