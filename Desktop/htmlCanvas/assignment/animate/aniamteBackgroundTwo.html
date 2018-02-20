@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Animate Background</title>
+    <style>
+        body{
+            border: 0;
+            padding: 0;
+            margin: 0;
+        }
+
+        /*#img {*/
+           /*display: none;*/
+        /*}*/
+
+
+    </style>
+
+</head>
+<body>
+
+<canvas id="angryBird" height="800px" width="1500px">
+<img src="cloud.jpg">
+</canvas>
+
+
+<script type="text/javascript">
+
+
+
+        var bg = new Image();
+        bg.src = "cloud.jpg";
+
+        function initCanvas() {
+            var ctx = document.getElementById('my_canvas').getContext('2d');
+            var cw = ctx.canvas.width, ch = ctx.canvas.height;
+
+            function Background () {
+                this.x = 0, this.y = 0, this.w =bg.width, this.h = bg.height;
+                this.render = function () {
+                    ctx.drawImage(bg, this.x--, 0);
+                    if(this.x <= -499) {
+                        this.x = 0;
+                    }
+                }
+            }
+
+            var background = new Background();
+            function animate() {
+                ctx.save();
+                ctx.clearRect(0,0,cw, ch);
+                background.render();
+                ctx.restore();
+            }
+
+            var animateInterval = setInterval(animate, 30);
+        }
+
+        var.addEventListener('load', function (event) {
+            initCanvas();
+        });
+
+</script>
+
+</body>
+</html>
