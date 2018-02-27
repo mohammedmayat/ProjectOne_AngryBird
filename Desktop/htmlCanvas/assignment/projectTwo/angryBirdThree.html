@@ -31,7 +31,7 @@
 
 
     var canvas = document.getElementById("angryBird"); //select element by id
-    var ctx = canvas.getContext("2d"); //get context that is drawn or written
+    var ctx = canvas.getContext("2d"); //get context of the canvas
 
     //function for creating circle
     function circle(x, y, radius, startangle, endangle) {
@@ -59,7 +59,7 @@
     ctx.bezierCurveTo(630, 80, 790, 1, 688, 140); //draw the beizer by using the three control point
     ctx.bezierCurveTo(740, 20, 980, 180, 692, 170); ////draw the beizer by using the three control point
     ctx.lineWidth = 5; ////set the line with to 5px
-    ctx.strokeStyle = "#000000";  //set the colur of stroke to black by selecting hex code #000
+    ctx.strokeStyle = "#000000";  //set the colour of stroke to black by selecting hex code #000
     ctx.fillStyle = "#da251c"; //choose this hex colour to make the shape crimson
     ctx.fill(); //fill the shape with the colour chosen
     ctx.stroke(); //fill the stroke with the colour chosen
@@ -88,7 +88,8 @@
 
     //bottom ellispe for bottom of body
     ctx.beginPath(); //begin drawing shape
-    ctx.ellipse(700, 400, 40, 90, 45 * Math.PI / 90, 0, 2 * Math.PI); //REASERCH elispe
+    ctx.ellipse(700, 400, 40, 90, 45 * Math.PI / 90,0,4 * Math.PI);
+    //          (x,y,x radius, y radius, rotation * Math.pi/ rotation ,start angle, end angle * Math.pi)
     ctx.fillStyle = "#fff"; //choose white for fill style by using hex code #fff
     ctx.fill(); //fill the ellipse with the colour chosen
     ctx.lineWidth = 5; //set the line with to 5px
