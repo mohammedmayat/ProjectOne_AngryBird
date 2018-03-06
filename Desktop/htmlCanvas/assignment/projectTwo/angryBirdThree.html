@@ -48,7 +48,7 @@
     //circle body
     ctx.fillStyle = "#da251c"; //choose this hex colour to make the circle crimson
     ctx.lineWidth = 5; //set the line with to 5px
-    ctx.strokeStyle = "#000"; //set the colur of stroke to black by selecting hex code #000
+    ctx.strokeStyle = "#000"; //set the colour of stroke to black by selecting hex code #000
     circle(700, 290, 150, 0, 2 * Math.PI, false);
     //circle function enter the x position, y position, set radius to 150 to get the shape of body, enter start angle and end angle, multiply by math.pi, enter false to draw circle clockwise
 
@@ -56,8 +56,8 @@
     //head curve
     ctx.beginPath(); //begin drawing shape
     ctx.moveTo(615, 169); //this is where you will start to draw the shape
-    ctx.bezierCurveTo(630, 80, 790, 1, 688, 140); //draw the beizer by using the three control point
-    ctx.bezierCurveTo(740, 20, 980, 180, 692, 170); ////draw the beizer by using the three control point
+    ctx.bezierCurveTo(630, 80, 790, 1, 688, 140); //draw the bezier Curve by using the three control point
+    ctx.bezierCurveTo(740, 20, 980, 180, 692, 170); ////draw the bezier Curve by using the three control point
     ctx.lineWidth = 5; ////set the line with to 5px
     ctx.strokeStyle = "#000000";  //set the colour of stroke to black by selecting hex code #000
     ctx.fillStyle = "#da251c"; //choose this hex colour to make the shape crimson
@@ -69,9 +69,9 @@
     //this will cover the stroke on top of circle where the head curve comes in
     ctx.beginPath(); //begin drawing shape
     ctx.moveTo(618, 170); //this is where you will start to draw the shape
-    ctx.quadraticCurveTo(635, 175, 765, 168); //draw the beizer by using the two control point
+    ctx.quadraticCurveTo(635, 175, 765, 168); //draw the quadratic curve by using the two control point
     ctx.lineWidth = 12; //set the line with to 12px
-    ctx.strokeStyle = "#da251c"; //set the colur of stroke to crimson by selecting hex code #da251c
+    ctx.strokeStyle = "#da251c"; //set the colour of stroke to crimson by selecting hex code #da251c
     ctx.stroke(); //fill the stroke with the colour chosen
     ctx.closePath(); // close the shape
 
@@ -79,9 +79,9 @@
     //this will cover the black between the two quadraticCurve curves
     ctx.beginPath();  //begin drawing shape
     ctx.moveTo(700, 120); //this is where you will start to draw the curve
-    ctx.quadraticCurveTo(676, 159, 676, 159); //draw the beizer by using the two control point
+    ctx.quadraticCurveTo(676, 159, 676, 159); //draw the quadratic curve by using the two control point
     ctx.lineWidth = 10; //set the line with to 10px
-    ctx.strokeStyle = "#da251c"; //set the colur of stroke to crimson by selecting hex code #da251c
+    ctx.strokeStyle = "#da251c"; //set the colour of stroke to crimson by selecting hex code #da251c
     ctx.stroke(); //fill the stroke with the colour chosen
     ctx.closePath(); // close the shape
 
@@ -93,21 +93,21 @@
     ctx.fillStyle = "#fff"; //choose white for fill style by using hex code #fff
     ctx.fill(); //fill the ellipse with the colour chosen
     ctx.lineWidth = 5; //set the line with to 5px
-    ctx.strokeStyle = "#000"; //set the colur of stroke to black by selecting hex code #000
+    ctx.strokeStyle = "#000"; //set the colour of stroke to black by selecting hex code #000
     ctx.stroke();  //fill the stroke with the colour chosen
     ctx.closePath(); // close the shape
 
 
     //eyes left
     ctx.fillStyle = "#fff"; //choose white for fill style by using hex code #fff
-    ctx.strokeStyle = "#000"; //set the colur of stroke to black by selecting hex code #000
+    ctx.strokeStyle = "#000"; //set the colour of stroke to black by selecting hex code #000
     ctx.lineWidth = "5"; //set the line with to 5px
     circle(630, 295, 40, 0, 2 * Math.PI, false);
     //circle function enter the x position, y position, set radius to 40 to get the shape of eye, enter start angle and end angle, multiply by math.pi, enter false to draw circle clockwise
 
     //eyeball left
     ctx.fillStyle = "#000"; //choose white for fill style by using hex code #fff
-    ctx.strokeStyle = "#fff"; //set the colur of stroke to white by selecting hex code #fff
+    ctx.strokeStyle = "#fff"; //set the colour of stroke to white by selecting hex code #fff
     ctx.lineWidth = "5"; //set the line with to 5px
     circle(640, 290, 15, 0, 2 * Math.PI, false);
     //circle function enter the x position, y position, set radius to 15 to get the shape of eyeball, enter start angle and end angle, multiply by math.pi, enter false to draw circle clockwise
@@ -115,7 +115,7 @@
 
     //eyes right
     ctx.fillStyle = "#fff"; //choose white for fill style by using hex code #fff
-    ctx.strokeStyle = "#000"; //set the colur of stroke to black by selecting hex code #000
+    ctx.strokeStyle = "#000"; //set the colour of stroke to black by selecting hex code #000
     ctx.lineWidth = "5"; //set the line with to 5px
     circle(700, 295, 40, 0, 2 * Math.PI, false);
     //circle function enter the x position, y position, set radius to 40 to get the shape of eyes, enter start angle and end angle, multiply by math.pi, enter false to draw circle clockwise
@@ -123,7 +123,7 @@
 
     //eyeball right
     ctx.fillStyle = "#000"; //choose white for fill style by using hex code #fff
-    ctx.strokeStyle = "#fff"; //set the colur of stroke to white by selecting hex code #fff
+    ctx.strokeStyle = "#fff"; //set the colour of stroke to white by selecting hex code #fff
     ctx.lineWidth = "5"; //set the line with to 5px
     circle(700, 290, 17, 0, 2 * Math.PI, false);
     //circle function enter the x position, y position, set radius to 17 to get the shape of eye, enter start angle and end angle, multiply by math.pi, enter false to draw circle clockwise
@@ -167,9 +167,9 @@
 
 
     //bottom bick
-    ctx.beginPath(); //begin drawing traingle
-    ctx.moveTo(650, 402);  //draw the bottom point of traingle
-    ctx.lineTo(600, 360);   //draw the left point of traingle
+    ctx.beginPath(); //begin drawing triangle
+    ctx.moveTo(650, 402);  //draw the bottom point of triangle
+    ctx.lineTo(600, 360);   //draw the left point of triangle
     ctx.lineTo(722, 360);   //draw the right point of triangle
     ctx.fillStyle = "#FFf500";  //choose yellow for fill style by using hex code #fff500
     ctx.fill(); //fill the shape with the chosen colour
